@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Razas Bovinas - por Catalina Medina Barragán</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap');
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f2f2f2;
+    color: #333;
+  }
+
+  header {
+    background: #1abc9c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  section {
+    padding: 40px;
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .buttons {
+    margin-top: 20px;
+  }
+
+  button {
+    padding: 12px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #2980b9;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  button:hover {
+    background: #1f6391;
+  }
+
+  /* Tarjetas */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .card {
+    width: 100%;
+    height: 500px;
+    perspective: 1000px;
+  }
+
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+
+  .card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+    background: #ccc;
+  }
+
+  .card-back {
+    background: #ccc; /* Color llamativo de la tarjeta */
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    text-align: left;
+    font-size: 14px;
+    overflow-y: auto;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .card-back h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    color: #3B76B7; /* Nombre de raza destacado */
+    margin-bottom: 10px;
+  }
+
+  .card-back img {
+    vertical-align: middle;
+    margin-left: 5px;
+    border: 1px solid #ccc;
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Razas Bovinas - Presentación</h1>
+</header>
+
+<!-- SECCIÓN INICIO -->
+<section id="inicio">
+  <h2>Diferencias entre Bos indicus y Bos taurus</h2>
+  <p><strong>Bos indicus:</strong> Resistente al calor, con joroba, orejas largas y gran tolerancia a parásitos.</p>
+  <p><strong>Bos taurus:</strong> De origen europeo, muy productivo en carne y leche, adaptado a climas templados y fríos, sin joroba.</p>
+  
+  <div class="buttons">
+    <button onclick="mostrar('indicus')">Ver razas Bos indicus</button>
+    <button onclick="mostrar('taurus')">Ver razas Bos taurus</button>
+  </div>
+</section>
+
+<!-- SECCIÓN BOS INDICUS (5 tarjetas) -->
+<section id="indicus" class="hidden">
+  <h2>Razas Bos indicus</h2>
+  <div class="grid">
+    <!-- Tarjeta ejemplo, copiar y cambiar raza -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="GUZERAT.jpg" alt="Raza Indicus 1">
+        </div>
+        <div class="card-back">
+          <h3>GUZARAT</h3>
+          <p><strong>Fin zootécnico:</strong>  doble propósito, carne y leche </p>
+          <p><strong>Características productivas:</strong> producción de carne de calidad y una moderada producción de leche. Es una raza longeva con buen temperamento, que se utiliza también para trabajo y para mejorar genéticamente otras razas, gracias a su capacidad de ganancia de peso y longevidad.  </p>
+          <p><strong>Regiones en Colombia:</strong> Orinoquía(Llanos orientales). la costa del pacífico y los valles interandinos del Magdalena y el Cauca </p>
+          <p><strong>Origen:</strong> <img src="India.png" alt="Bandera" width="30"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="GYR.jpg" alt="Raza Indicus 2">
+        </div>
+        <div class="card-back">
+          <h3>Raza 2</h3>
+          <p><strong>Fin zootécnico:</strong> </p>
+          <p><strong>Características productivas:</strong> </p>
+          <p><strong>Regiones en Colombia:</strong> </p>
+          <p><strong>Origen:</strong> <img src="pais2.png" alt="Bandera" width="30"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjetas 3, 4, 5 iguales, solo cambiar imágenes y nombres -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="NELORE.jpg" alt="Raza Indicus 3">
+        </div>
+        <div class="card-back">
+          <h3>Raza 3</h3>
+          <p><strong>Fin zootécnico:</strong> </p>
+          <p><strong>Características productivas:</strong> </p>
+          <p><strong>Regiones en Colombia:</strong> </p>
+          <p><strong>Origen:</strong> <img src="pais3.png" alt="Bandera" width="30"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="BRAHMAN.jpg" alt="Raza Indicus 4">
+        </div>
+        <div class="card-back">
+          <h3>Raza 4</h3>
+          <p><strong>Fin zootécnico:</strong> </p>
+          <p><strong>Características productivas:</strong> </p>
+          <p><strong>Regiones en Colombia:</strong> </p>
+          <p><strong>Origen:</strong> <img src="pais4.png" alt="Bandera" width="30"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="INDUBRASIL.jpg" alt="Raza Indicus 5">
+        </div>
+        <div class="card-back">
+          <h3>Raza 5</h3>
+          <p><strong>Fin zootécnico:</strong> </p>
+          <p><strong>Características productivas:</strong> </p>
+          <p><strong>Regiones en Colombia:</strong> </p>
+          <p><strong>Origen:</strong> <img src="pais5.png" alt="Bandera" width="30"></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <button onclick="volver()">Volver</button>
+</section>
+
+<!-- SECCIÓN BOS TAURUS (13 tarjetas) -->
+<section id="taurus" class="hidden">
+  <h2>Razas Bos taurus</h2>
+  <div class="grid">
+    <!-- Tarjeta ejemplo, copiar y cambiar raza hasta 13 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="taurus1.jpg" alt="Raza Taurus 1">
+        </div>
+        <div class="card-back">
+          <h3>Raza 1</h3>
+          <p><strong>Fin zootécnico:</strong> </p>
+          <p><strong>Características productivas:</strong> </p>
+          <p><strong>Regiones en Colombia:</strong> </p>
+          <p><strong>Origen:</strong> <img src="pais1.png" alt="Bandera" width="30"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copiar y cambiar nombre/imágenes hasta la Raza 13 -->
+    <!-- Ejemplo siguiente tarjeta -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="taurus2.jpg" alt="Raza Taurus 2">
+        </div>
+        <div class="card-back">
+          <h3>Raza 2</h3>
+          <p><strong>Fin zootécnico:</strong> </p>
+          <p><strong>Características productivas:</strong> </p>
+          <p><strong>Regiones en Colombia:</strong> </p>
+          <p><strong>Origen:</strong> <img src="pais2.png" alt="Bandera" width="30"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repetir hasta Raza 13 -->
+  </div>
+  <button onclick="volver()">Volver</button>
+</section>
+
+<script>
+  function mostrar(seccion) {
+    document.getElementById("inicio").classList.add("hidden");
+    document.getElementById("indicus").classList.add("hidden");
+    document.getElementById("taurus").classList.add("hidden");
+    document.getElementById(seccion).classList.remove("hidden");
+  }
+
+  function volver() {
+    document.getElementById("inicio").classList.remove("hidden");
+    document.getElementById("indicus").classList.add("hidden");
+    document.getElementById("taurus").classList.add("hidden");
+  }
+</script>
+</body>
+</html>

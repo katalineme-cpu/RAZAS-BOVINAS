@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Razas Bovinas - por Catalina Medina Barragán</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap');
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f2f2f2;
+    color: #333;
+  }
+
+  header {
+    background: #1abc9c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  section {
+    padding: 40px;
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .buttons {
+    margin-top: 20px;
+  }
+
+  button {
+    padding: 12px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #2980b9;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  button:hover {
+    background: #1f6391;
+  }
+
+  /* Tarjetas */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .card {
+    width: 100%;
+    height: 500px;
+    perspective: 1000px;
+  }
+
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+
+  .card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+    background: #ccc;
+  }
+
+  .card-back {
+    background: #ccc; /* Color llamativo de la tarjeta */
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    text-align: left;
+    font-size: 14px;
+    overflow-y: auto;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .card-back h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    color: #3B76B7; /* Nombre de raza destacado */
+    margin-bottom: 10px;
+  }
+
+  .card-back img {
+    vertical-align: middle;
+    margin-left: 5px;
+    border: 1px solid #ccc;
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Razas Bovinas -por: Catalina Medina Barragán</h1>
+</header>
+
+<!-- SECCIÓN INICIO -->
+<section id="inicio">
+  <h2>Diferencias entre Bos indicus y Bos taurus</h2>
+  <p><strong>Bos indicus:</strong> Resistente al calor, con joroba, orejas largas y gran tolerancia a parásitos.</p>
+  <p><strong>Bos taurus:</strong> De origen europeo, muy productivo en carne y leche, adaptado a climas templados y fríos, sin joroba.</p>
+  
+  <div class="buttons">
+    <button onclick="mostrar('indicus')">Ver razas Bos indicus</button>
+    <button onclick="mostrar('taurus')">Ver razas Bos taurus</button>
+  </div>
+</section>
+
+<!-- SECCIÓN BOS INDICUS (5 tarjetas) -->
+<section id="indicus" class="hidden">
+  <h2>Razas Bos indicus</h2>
+  <div class="grid">
+    <!-- Tarjeta ejemplo, copiar y cambiar raza -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="GUZERAT.jpg" alt="Raza Indicus 1">
+        </div>
+        <div class="card-back">
+          <h3>GUZARAT</h3>
+          <p><strong>Fin zootécnico:</strong>  doble propósito, (carne y leche) </p>
+          <p><strong>Características productivas:</strong> producción de carne de calidad y una moderada producción de leche. Es una raza longeva con buen temperamento, que se utiliza también para trabajo y para mejorar genéticamente otras razas, gracias a su capacidad de ganancia de peso y longevidad.  </p>
+          <p><strong>Regiones en Colombia:</strong> Orinoquía(Llanos orientales). la costa del pacífico y los valles interandinos del Magdalena y el Cauca </p>
+          <p><strong>Origen:</strong> <img src="India.png" alt="Bandera" width="30"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="GYR.jpg" alt="Raza Indicus 2">
+        </div>
+        <div class="card-back">
+          <h3>GYR</h3>
+          <p><strong>Fin zootécnico:</strong>Leche</p>
+          <p><strong>Características productivas:</strong>buena producción láctea para climas cálidos; leche con buen contenido de grasa; animales resistentes al calor y a enfermedades tropicales; cabeza con frente abombada, orejas largas y piel suelta. </p>
+          <p><strong>Regiones en Colombia:</strong>Antioquia, Tolima, Cundinamarca y la costa Caribe (cerca de Montería)</p>
+          <p><strong>Origen:</strong> <img src="India.png" alt="Bandera" width="30"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjetas 3, 4, 5 iguales, solo cambiar imágenes y nombres -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="NELORE.jpg" alt="Raza Indicus 3">
+        </div>
+        <div class="card-back">
+          <h3>NELORE</h3>
+          <p><strong>Fin zootécnico:</strong> Carne </p>
+          <p><strong>Características productivas:</strong>gran rusticidad, enorme tolerancia al calor y a insectos, buena eficiencia alimenticia en pastoreo extensivo, parto fácil, buena conformación cárnica en cruzas; pelaje claro con piel oscura </p>
+          <p><strong>Regiones en Colombia:</strong> regiones tropicales de Colombia, especialmente en la Orinoquía (Llanos Orientales), para zonas inundables, y en el Valle del Cauca</p>
+          <p><strong>Origen:</strong> <img src="India.png" alt="Bandera" width="30"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="BRAHMAN.jpg" alt="Raza Indicus 4">
+        </div>
+        <div class="card-back">
+          <h3>BRAHMAN</h3>
+          <p><strong>Fin zootécnico:</strong>Carne </p>
+          <p><strong>Características productivas:</strong>alta resistencia al calor y a parásitos, buena adaptación a pastos pobres, temperamento variable pero pueden lograr buena mansedumbre con manejo adecuado; joroba sobre los hombros y papada pronunciada; crecimiento y terminación aceptables en sistemas extensivos.</p>
+          <p><strong>Regiones en Colombia:</strong>ampliamente usado en Llanos Orientales (Orinoquía) y en la Costa Caribe</p>
+          <p><strong>Origen:</strong> <img src="USA.png" alt="Bandera" width="30"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="INDUBRASIL.jpg" alt="Raza Indicus 5">
+        </div>
+        <div class="card-back">
+          <h3>INDUBRASIL</h3>
+          <p><strong>Fin zootécnico:</strong>Doble propósito (Carne y leche) </p>
+          <p><strong>Características productivas:</strong> animales generalmente altos y de orejas muy largas; combinación de rasgos de Gyr, Guzerá y Nelore (cebúes indianos) — buena adaptación al calor y rusticidad; comportamiento productivo orientado a cárnico en muchas explotaciones.</p>
+          <p><strong>Regiones en Colombia:</strong>Baja presencia pero se pueden encontrar en Meta, Sucre, Córdoba y Antioquia </p>
+          <p><strong>Origen:</strong> <img src="brasil.png" alt="Bandera" width="30"></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <button onclick="volver()">Volver</button>
+</section>
+
+<!-- SECCIÓN BOS TAURUS (13 tarjetas) -->
+<section id="taurus" class="hidden">
+  <h2>Razas Bos taurus</h2>
+  <div class="grid">
+    <!-- Tarjeta ejemplo, copiar y cambiar raza hasta 13 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="HEREFORD.jpg" alt="Raza Taurus 1">
+        </div>
+        <div class="card-back">
+          <h3>HEREFORD</h3>
+          <p><strong>Fin zootécnico:</strong> Carne </p>
+          <p><strong>Características productivas:</strong>buena ganancia de peso, carne de excelente marmoreo, temperamento dócil. </p>
+          <p><strong>Regiones en Colombia:</strong>zonas de trópico alto templado (Cundinamarca, Boyacá, Nariño). </p>
+          <p><strong>Origen:</strong> <img src="INGLATERRA.png" alt="Bandera" width="30"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copiar y cambiar nombre/imágenes hasta la Raza 13 -->
+    <!-- Ejemplo siguiente tarjeta -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="ANGUS.jpg" alt="Raza Taurus 2">
+        </div>
+        <div class="card-back">
+          <h3>ANGUS</h3>
+          <p><strong>Fin zootécnico:</strong>Carne </p>
+          <p><strong>Características productivas:</strong>excelente marmoreo y terneza, gran demanda en mercados premium; animales precoces y fértiles </p>
+          <p><strong>Regiones en Colombia:</strong> altiplano cundiboyacense, Antioquia, Nariño, trópico alto adaptado.</p>
+          <p><strong>Origen:</strong> <img src="ESCOCIA.png" alt="Bandera" width="30"></p>
+        </div>
+      </div>
+    </div>
+
+<!-- Copiar y cambiar nombre/imágenes hasta la Raza 13 -->
+    <!-- Ejemplo siguiente tarjeta -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="REDANGUS.jpg" alt="Raza Taurus 2">
+        </div>
+        <div class="card-back">
+          <h3>RED ANGUS</h3>
+          <p><strong>Fin zootécnico:</strong> Carne </p>
+          <p><strong>Características productivas:</strong> </p>
+          <p><strong>Regiones en Colombia:</strong> </p>
+          <p><strong>Origen:</strong> <img src="ESCOCIA.png" alt="Bandera" width="30"></p>
+        </div>
+      </div>
+    </div>
+<!-- Copiar y cambiar nombre/imágenes hasta la Raza 13 -->
+    <!-- Ejemplo siguiente tarjeta -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="AZULBELGA.jpg" alt="Raza Taurus 2">
+        </div>
+        <div class="card-back">
+          <h3>AZUL BELGA</h3>
+          <p><strong>Fin zootécnico:</strong> Carne </p>
+          <p><strong>Características productivas:</strong>conocido por doble musculatura, produce altos rendimientos en canal y cortes magros; requiere manejo nutricional exigente. </p>
+          <p><strong>Regiones en Colombia:</strong> </p>
+          <p><strong>Origen:</strong> <img src="BELGICA.png" alt="Bandera" width="30"></p>
+        </div>
+      </div>
+    </div>
+<!-- Copiar y cambiar nombre/imágenes hasta la Raza 13 -->
+    <!-- Ejemplo siguiente tarjeta -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="PIEMONTESE.jpg" alt="Raza Taurus 2">
+        </div>
+        <div class="card-back">
+          <h3>PIEMONTESE</h3>
+          <p><strong>Fin zootécnico:</strong> Carne </p>
+          <p><strong>Características productivas:</strong>doble musculatura, carne magra y rendimiento alto en canal; precocidad en engorde. </p>
+          <p><strong>Regiones en Colombia:</strong> </p>
+          <p><strong>Origen:</strong> <img src="ITALIA.png" alt="Bandera" width="30"></p>
+        </div>
+      </div>
+    </div>
+<!-- Copiar y cambiar nombre/imágenes hasta la Raza 13 -->
+    <!-- Ejemplo siguiente tarjeta -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="LIMOUSIN.jpg" alt="Raza Taurus 2">
+        </div>
+        <div class="card-back">
+          <h3>LIMOUSIN</h3>
+          <p><strong>Fin zootécnico:</strong>	Carne </p>
+          <p><strong>Características productivas:</strong>animales rústicos, musculosos, gran rendimiento en canal, carne magra y sabrosa. </p>
+          <p><strong>Regiones en Colombia:</strong>trópico alto y algunas zonas intermedias (Boyacá, Antioquia). </p>
+          <p><strong>Origen:</strong> <img src="FRANCIA.png" alt="Bandera" width="30"></p>
+        </div>
+      </div>
+    </div>
+<!-- Copiar y cambiar nombre/imágenes hasta la Raza 13 -->
+    <!-- Ejemplo siguiente tarjeta -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="CHAROLAIS.jpg" alt="Raza Taurus 2">
+        </div>
+        <div class="card-back">
+          <h3>CHAROLAIS</h3>
+          <p><strong>Fin zootécnico:</strong> Carne </p>
+          <p><strong>Características productivas:</strong>animales grandes, musculosos, alto peso al destete y rendimiento en canal; cruzas muy usadas para mejorar peso y conformación. </p>
+          <p><strong>Regiones en Colombia:</strong> </p>
+          <p><strong>Origen:</strong> <img src="FRANCIA.png" alt="Bandera" width="30"></p>
+        </div>
+      </div>
+    </div>
+<!-- Copiar y cambiar nombre/imágenes hasta la Raza 13 -->
+    <!-- Ejemplo siguiente tarjeta -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="SIMENTAL.jpg" alt="Raza Taurus 2">
+        </div>
+        <div class="card-back">
+          <h3>SIMENTAL</h3>
+          <p><strong>Fin zootécnico:</strong>Doble propósito (carne y leche) </p>
+          <p><strong>Características productivas:</strong> buena producción láctea con sólidos aceptables, excelente rendimiento en canal; gran tamaño corporal.</p>
+          <p><strong>Regiones en Colombia:</strong> </p>
+          <p><strong>Origen:</strong> <img src="SUIZA.png" alt="Bandera" width="30"></p>
+        </div>
+      </div>
+    </div>
+<!-- Copiar y cambiar nombre/imágenes hasta la Raza 13 -->
+    <!-- Ejemplo siguiente tarjeta -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="JERSEY.jpg" alt="Raza Taurus 2">
+        </div>
+        <div class="card-back">
+          <h3>JERSEY</h3>
+          <p><strong>Fin zootécnico:</strong> Leche </p>
+          <p><strong>Características productivas:</strong>leche con muy alto contenido de grasa y sólidos, animales pequeños, precoces y muy eficientes en conversión. </p>
+          <p><strong>Regiones en Colombia:</strong> trópico alto (Cundinamarca, Boyacá, Antioquia)</p>
+          <p><strong>Origen:</strong> <img src="ISLAJERSEY.png" alt="Bandera" width="30"></p>
+        </div>
+      </div>
+    </div>
+<!-- Copiar y cambiar nombre/imágenes hasta la Raza 13 -->
+    <!-- Ejemplo siguiente tarjeta -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="HOLSTEIN.jpg" alt="Raza Taurus 2">
+        </div>
+        <div class="card-back">
+          <h3>HOLSTEIN</h3>
+          <p><strong>Fin zootécnico:</strong>Leche </p>
+          <p><strong>Características productivas:</strong>raza más productora de leche en volumen; requiere buen manejo y alimentación; gran tamaño corporal. </p>
+          <p><strong>Regiones en Colombia:</strong>altiplano cundiboyacense, Nariño, Antioquia, Cauca (zonas frías de trópico alto). </p>
+          <p><strong>Origen:</strong> <img src="PAISESBAJOS.png" alt="Bandera" width="30"></p>
+        </div>
+      </div>
+    </div>
+<!-- Copiar y cambiar nombre/imágenes hasta la Raza 13 -->
+    <!-- Ejemplo siguiente tarjeta -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="PARDOSUIZO.jpg" alt="Raza Taurus 2">
+        </div>
+        <div class="card-back">
+          <h3>PARDO SUIZO</h3>
+          <p><strong>Fin zootécnico:</strong> Leche </p>
+          <p><strong>Características productivas:</strong>leche de buena calidad para quesos (alto contenido de proteína), gran rusticidad, longevidad. </p>
+          <p><strong>Regiones en Colombia:</strong>altiplano y regiones frías, se adapta bien a pastoreo </p>
+          <p><strong>Origen:</strong> <img src="SUIZA.png" alt="Bandera" width="30"></p>
+        </div>
+      </div>
+    </div>
+<!-- Copiar y cambiar nombre/imágenes hasta la Raza 13 -->
+    <!-- Ejemplo siguiente tarjeta -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="AYRSHIRE.jpg" alt="Raza Taurus 2">
+        </div>
+        <div class="card-back">
+          <h3>AYRSHIRE</h3>
+          <p><strong>Fin zootécnico:</strong> Leche </p>
+          <p><strong>Características productivas:</strong>leche con buen equilibrio entre volumen y sólidos; rusticidad en pastoreo; animales medianos y longevos </p>
+          <p><strong>Regiones en Colombia:</strong> altiplano, Nariño, trópico alto húmedo.</p>
+          <p><strong>Origen:</strong> <img src="ESCOCIA.png" alt="Bandera" width="30"></p>
+        </div>
+      </div>
+    </div>
+<!-- Copiar y cambiar nombre/imágenes hasta la Raza 13 -->
+    <!-- Ejemplo siguiente tarjeta -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="NORMANDO.jpg" alt="Raza Taurus 2">
+        </div>
+        <div class="card-back">
+          <h3>NORMANDO</h3>
+          <p><strong>Fin zootécnico:</strong> Doble propósito (leche y carne).</p>
+          <p><strong>Características productivas:</strong>leche con alto contenido de grasa y proteína (apta para quesería), carne de buen marmoreo; rusticidad en climas fríos. </p>
+          <p><strong>Regiones en Colombia:</strong>altiplano cundiboyacense y Nariño </p>
+          <p><strong>Origen:</strong> <img src="FRANCIA.png" alt="Bandera" width="30"></p>
+        </div>
+      </div>
+    </div>
+    <!-- Repetir hasta Raza 13 -->
+  </div>
+  <button onclick="volver()">Volver</button>
+</section>
+
+<script>
+  function mostrar(seccion) {
+    document.getElementById("inicio").classList.add("hidden");
+    document.getElementById("indicus").classList.add("hidden");
+    document.getElementById("taurus").classList.add("hidden");
+    document.getElementById(seccion).classList.remove("hidden");
+  }
+
+  function volver() {
+    document.getElementById("inicio").classList.remove("hidden");
+    document.getElementById("indicus").classList.add("hidden");
+    document.getElementById("taurus").classList.add("hidden");
+  }
+</script>
+</body>
+</html>
